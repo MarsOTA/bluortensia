@@ -1,5 +1,5 @@
 export const siteUrl = "https://www.bluortensia.com";
-export const whatsappUrl = "https://wa.me/393000000000?text=Ciao%20BluOrtensia%2C%20ti%20invio%20una%20foto%20del%20mio%20outdoor%20per%20una%20proposta%20su%20misura";
+export const whatsappUrl = "https://wa.me/393000000000?text=Ciao%20BluOrtensia%2C%20vorrei%20informazioni%20sugli%20ombrelloni%20artigianali";
 
 export const navLinks = [
   ["/beach-club", "Beach club"],
@@ -11,96 +11,16 @@ export const navLinks = [
 ] as const;
 
 export const pageData = {
-  "beach-club": {
-    title: "Ombrelloni per beach club scenografici | BluOrtensia",
-    description: "Ombrelloni artigianali crochet e macramé per beach club premium: file lettini più riconoscibili, eleganti e fotogeniche.",
-    h1: "Ombrelloni artigianali per beach club memorabili",
-    eyebrow: "Beach club e stabilimenti premium",
-    audience: "beach club",
-    body: "Per uno stabilimento balneare, l'ombrellone non è solo ombra: è la prima geometria che l'ospite vede entrando e la firma che rimane nelle foto. BluOrtensia rende file lettini, passerelle e lounge più calde, ordinate e riconoscibili.",
-    proof: "Ideale per restyling stagionali, nuove aree premium, prime file, cabane leggere e zone aperitivo sulla sabbia.",
-  },
-  hotel: {
-    title: "Ombrelloni per hotel e resort | BluOrtensia",
-    description: "Teli artigianali e ombrelloni completi per hotel, resort e boutique hospitality con piscine, terrazze e spiagge più iconiche.",
-    h1: "Ombrelloni artigianali per hotel, resort e pool area",
-    eyebrow: "Hotel, resort e boutique hospitality",
-    audience: "hotel",
-    body: "In un hotel ogni dettaglio outdoor partecipa alla percezione della camera, della piscina e del servizio. Un ombrellone BluOrtensia aggiunge materia, ombra filtrata e un segno artigianale che parla di vacanza mediterranea senza sembrare decorazione standard.",
-    proof: "Perfetto per pool area, beach area, suite con terrazza, spa outdoor e zone colazione vista mare.",
-  },
-  ville: {
-    title: "Ombrelloni per ville sul mare | BluOrtensia",
-    description: "Ombrelloni crochet e macramé per ville private, terrazze e bordi piscina: dettagli artigianali caldi, naturali e scenografici.",
-    h1: "Ombrelloni artigianali per ville sul mare e terrazze private",
-    eyebrow: "Ville private e dimore mediterranee",
-    audience: "ville",
-    body: "Una villa ha bisogno di dettagli silenziosi ma presenti: elementi capaci di completare la vista, non di rubarla. BluOrtensia lavora su proporzioni, colore e trama per creare ombra leggera su terrazze, patii e bordi piscina.",
-    proof: "Consigliato per terrazze panoramiche, giardini con piscina, pergole leggere e aree pranzo estive.",
-  },
-  giardini: {
-    title: "Ombrelloni per giardini mediterranei | BluOrtensia",
-    description: "Ombrelloni artigianali per giardini, patio e outdoor living: cotone naturale, trama aperta e atmosfera mediterranea premium.",
-    h1: "Ombrelloni artigianali per giardini mediterranei",
-    eyebrow: "Giardini, patio e outdoor living",
-    audience: "giardini",
-    body: "Nel giardino l'ombra deve sembrare naturale, come una stanza estiva tra piante, pietra e tessuti chiari. Le trame BluOrtensia introducono un ritmo morbido che rende più accogliente una zona lettura, pranzo o relax.",
-    proof: "Adatto a giardini privati, patio, pergole aperte, bordi piscina e aree lounge domestiche.",
-  },
-  "ristoranti-sul-mare": {
-    title: "Ombrelloni per ristoranti sul mare | BluOrtensia",
-    description: "Ombrelloni artigianali per dehors e ristoranti sul mare: tavoli più intimi, riconoscibili e fotogenici dalla colazione alla cena.",
-    h1: "Ombrelloni artigianali per ristoranti sul mare e dehors",
-    eyebrow: "Dehors, beach restaurant e lounge vista mare",
-    audience: "ristoranti sul mare",
-    body: "Un dehors vista mare deve proteggere, accogliere e restare bello nelle fotografie degli ospiti. Con frange, cotone e trama aperta, BluOrtensia crea tavoli più intimi senza chiudere la luce e la vista.",
-    proof: "Pensato per ristoranti sulla sabbia, terrazze fronte mare, cocktail bar e beach lounge.",
-  },
-  "forte-dei-marmi": {
-    title: "Ombrelloni Forte dei Marmi | BluOrtensia",
-    description: "Ombrelloni artigianali a Forte dei Marmi per beach club, ville e hotel: eleganza naturale, crochet e macramé per outdoor premium.",
-    h1: "Ombrelloni artigianali a Forte dei Marmi",
-    eyebrow: "Versilia elegante e stabilimenti iconici",
-    audience: "Forte dei Marmi",
-    body: "A Forte dei Marmi l'outdoor richiede misura: lusso discreto, palette chiara, materiali naturali e un'immagine impeccabile. BluOrtensia inserisce un dettaglio artigianale che valorizza spiagge ordinate, ville e hotel senza appesantire l'atmosfera.",
-    proof: "Per stabilimenti balneari, ville in Versilia, hotel con beach area e terrazze private.",
-  },
-  puglia: {
-    title: "Ombrelloni Puglia per masserie e beach club | BluOrtensia",
-    description: "Ombrelloni crochet e macramé in Puglia per masserie, beach club, hotel e ville: calce bianca, cotone naturale e ombra scenografica.",
-    h1: "Ombrelloni artigianali in Puglia per masserie, hotel e mare",
-    eyebrow: "Calce bianca, ulivi e mare pugliese",
-    audience: "Puglia",
-    body: "In Puglia il bianco della calce, la pietra e gli ulivi chiedono materiali sinceri. Le trame BluOrtensia portano un'ombra morbida che dialoga con masserie, terrazze, piscine e beach club senza perdere autenticità.",
-    proof: "Ideale per masserie con piscina, lidi, rooftop, ville in Valle d'Itria e ristoranti costieri.",
-  },
-  sardegna: {
-    title: "Ombrelloni Sardegna per hotel, ville e beach club | BluOrtensia",
-    description: "Ombrelloni artigianali in Sardegna per outdoor premium: teli crochet, macramé e soluzioni complete per coste, resort e ville.",
-    h1: "Ombrelloni artigianali in Sardegna per outdoor premium",
-    eyebrow: "Coste naturali, resort e ville private",
-    audience: "Sardegna",
-    body: "La Sardegna ha una luce netta e un paesaggio che non sopporta eccessi. BluOrtensia lavora con colori naturali e trame ariose per creare ombra scenica rispettosa del mare, del vento e dei materiali locali.",
-    proof: "Per resort, beach club, ville con piscina, terrazze panoramiche e ristoranti sul mare.",
-  },
-  "costa-smeralda": {
-    title: "Ombrelloni Costa Smeralda luxury | BluOrtensia",
-    description: "Ombrelloni artigianali premium in Costa Smeralda: crochet, macramé e outdoor fotografabili per ville, hotel e beach club di lusso.",
-    h1: "Ombrelloni artigianali in Costa Smeralda",
-    eyebrow: "Outdoor luxury, naturale e riconoscibile",
-    audience: "Costa Smeralda",
-    body: "In Costa Smeralda il dettaglio deve essere raffinato anche quando sembra spontaneo. BluOrtensia propone ombrelloni artigianali che rendono più iconiche piscine, spiagge private e terrazze senza trasformarle in set artificiale.",
-    proof: "Pensato per ville, yacht club, hotel cinque stelle, beach lounge e aree private vista mare.",
-  },
-  sicilia: {
-    title: "Ombrelloni Sicilia per hotel, ville e ristoranti | BluOrtensia",
-    description: "Ombrelloni crochet e macramé in Sicilia per hotel, ville, beach club e ristoranti: ombra artigianale, calda e mediterranea.",
-    h1: "Ombrelloni artigianali in Sicilia per spazi outdoor mediterranei",
-    eyebrow: "Pietra chiara, agrumi e mare profondo",
-    audience: "Sicilia",
-    body: "In Sicilia l'ombra è parte dell'esperienza: riparo, pausa, convivialità. BluOrtensia aggiunge una trama artigianale che si inserisce tra pietra, ceramiche, agrumi e blu del mare con una presenza calda e fotografabile.",
-    proof: "Per hotel, dimore storiche, beach club, ristoranti sul mare e ville con terrazza panoramica.",
-  },
+  "beach-club": { title: "Ombrelloni per beach club | BluOrtensia", description: "Ombrelloni artigianali crochet e macramé per beach club: scenografie riconoscibili, fotogeniche e mediterranee per stabilimenti premium.", h1: "Ombrelloni artigianali per beach club", audience: "beach club", body: "Trasformiamo file di ombrelloni in una firma visiva coerente, pensata per lettini, passerelle, lounge e contenuti social." },
+  hotel: { title: "Ombrelloni per hotel di lusso | BluOrtensia", description: "Parasol crochet e macramé per hotel, resort e boutique hospitality che desiderano terrazze, piscine e spiagge più memorabili.", h1: "Ombrelloni artigianali per hotel", audience: "hotel", body: "Un dettaglio artigianale che valorizza arrival experience, piscina, beach area e suite outdoor con eleganza leggera." },
+  ville: { title: "Ombrelloni per ville sul mare | BluOrtensia", description: "Coperture e ombrelloni artigianali per ville private, giardini mediterranei e dimore al mare dal carattere esclusivo.", h1: "Ombrelloni artigianali per ville sul mare", audience: "ville", body: "Per pergole leggere, bordi piscina e terrazze panoramiche: una presenza scenica naturale, non un semplice accessorio." },
+  giardini: { title: "Ombrelloni per giardini mediterranei | BluOrtensia", description: "Ombrelloni crochet e macramé per giardini, patio e outdoor living con stile mediterraneo, cotone naturale e trama ariosa.", h1: "Ombrelloni artigianali per giardini", audience: "giardini", body: "Il giardino diventa una stanza estiva: ombra filtrata, texture materiche e una palette che dialoga con pietra, verde e lino." },
+  "ristoranti-sul-mare": { title: "Ombrelloni per ristoranti sul mare | BluOrtensia", description: "Ombrelloni artigianali per dehors e ristoranti sul mare: atmosfera riconoscibile, premium e fotogenica per tavoli outdoor.", h1: "Ombrelloni artigianali per ristoranti sul mare", audience: "ristoranti sul mare", body: "Creiamo un paesaggio ordinato e memorabile per pranzi vista mare, aperitivi e cene estive all'aperto." },
+  "forte-dei-marmi": { title: "Ombrelloni Forte dei Marmi | BluOrtensia", description: "Ombrelloni artigianali per beach club, ville e hotel a Forte dei Marmi: stile mediterraneo elegante e riconoscibile.", h1: "Ombrelloni artigianali a Forte dei Marmi", audience: "Forte dei Marmi", body: "Per contesti raffinati della Versilia, BluOrtensia porta una scenografia chiara, naturale e fotografabile su spiagge, ville e hotel." },
+  puglia: { title: "Ombrelloni Puglia | BluOrtensia", description: "Ombrelloni crochet e macramé per masserie, beach club, hotel e ville in Puglia con palette naturale e stile mediterraneo.", h1: "Ombrelloni artigianali in Puglia", audience: "Puglia", body: "Calce bianca, pietra, ulivi e mare: la trama artigianale BluOrtensia nasce per armonizzarsi con l'estetica pugliese." },
+  sardegna: { title: "Ombrelloni Sardegna | BluOrtensia", description: "Ombrelloni artigianali per beach club, hotel e ville in Sardegna: coperture fotogeniche in stile mediterraneo naturale.", h1: "Ombrelloni artigianali in Sardegna", audience: "Sardegna", body: "Per coste, resort e ville private, progettiamo ombra scenica che rispetta luce, vento e paesaggio naturale." },
+  "costa-smeralda": { title: "Ombrelloni Costa Smeralda | BluOrtensia", description: "Ombrelloni artigianali premium per Costa Smeralda: beach club, hotel e ville con outdoor riconoscibile e fotogenico.", h1: "Ombrelloni artigianali in Costa Smeralda", audience: "Costa Smeralda", body: "Una proposta discreta e luxury per outdoor iconici: texture in cotone, profili morbidi e identità visiva immediata." },
+  sicilia: { title: "Ombrelloni Sicilia | BluOrtensia", description: "Ombrelloni crochet e macramé per hotel, beach club, ville e ristoranti in Sicilia con eleganza mediterranea artigianale.", h1: "Ombrelloni artigianali in Sicilia", audience: "Sicilia", body: "Tra agrumi, pietra chiara e blu profondo, BluOrtensia aggiunge una trama scenografica alle aree outdoor siciliane." },
 };
 
 export type PageKey = keyof typeof pageData;

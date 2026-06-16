@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: "BluOrtensia | Ombrelloni artigianali mediterranei", template: "%s" },
   description: "Ombrelloni artigianali crochet e macramé per beach club, hotel, ville e outdoor mediterranei di lusso.",
-  openGraph: { title: "BluOrtensia", description: "Outdoor scenografici con ombrelloni artigianali crochet e macramé.", url: siteUrl, siteName: "BluOrtensia", locale: "it_IT", type: "website", images: ["/bluortensia-logo.svg"] },
-  icons: { icon: "/bluortensia-logo.svg" },
+  openGraph: { title: "BluOrtensia", description: "Outdoor scenografici con ombrelloni artigianali crochet e macramé.", url: siteUrl, siteName: "BluOrtensia", locale: "it_IT", type: "website", images: ["/logo/bluortensia-logo.svg"] },
+  icons: { icon: "/logo/bluortensia-logo.svg" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

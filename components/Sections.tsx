@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { whatsappUrl } from "@/lib/site";
 
@@ -20,28 +21,37 @@ export const faqs = [
   ],
 ];
 
-export function ParasolArt() {
-  return <div className="hero-parasol relative mx-auto min-h-[420px] w-full max-w-xl overflow-hidden rounded-[2.5rem] border border-sand/40 bg-cotton shadow-[0_40px_120px_rgba(49,89,107,0.16)]">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_15%,rgba(143,182,200,.22),transparent_35%),linear-gradient(135deg,rgba(220,199,163,.26),transparent_45%)]" />
-    <div className="absolute left-8 top-8 rounded-full border border-sand/50 bg-warm-white/80 px-4 py-2 text-xs uppercase tracking-[0.22em] text-deep-blue">spazio immagine</div>
-    <div className="absolute bottom-10 left-8 right-8 rounded-[2rem] bg-warm-white/88 p-6 backdrop-blur">
-      <p className="font-heading text-3xl uppercase tracking-[0.12em] text-deep-blue">Crochet, luce, ombra</p>
-      <p className="mt-3 text-sm leading-7 text-ink/70">Placeholder per una grande immagine lifestyle BluOrtensia: ombrellone artigianale, mare chiaro, lettini in lino, dettaglio delle frange mosse dal vento.</p>
-    </div>
-    <div className="absolute left-1/2 top-20 h-64 w-1 -translate-x-1/2 bg-beige/80" />
-    <div className="absolute left-1/2 top-16 h-44 w-[22rem] -translate-x-1/2 rounded-t-full border border-sand bg-cotton/95 shadow-2xl" />
-    <div className="absolute left-1/2 top-16 h-44 w-[22rem] -translate-x-1/2 rounded-t-full bg-[repeating-linear-gradient(90deg,rgba(185,159,124,.28)_0_1px,transparent_1px_34px)]" />
-    <div className="absolute left-1/2 top-56 flex -translate-x-1/2 gap-4 text-3xl text-beige"><span>⌁</span><span>⌁</span><span>⌁</span><span>⌁</span><span>⌁</span></div>
+export function HeroMedia() {
+  return <div className="hero-parasol relative mx-auto w-full max-w-2xl overflow-hidden rounded-[2.5rem] border border-sand/40 bg-cotton shadow-[0_40px_120px_rgba(49,89,107,0.16)]">
+    <Image
+      src="/images/mirto-ombrellone-macrame-hero.png"
+      alt="Ombrellone macramè Mirto BluOrtensia per beach club, hotel e ville sul mare"
+      width={1200}
+      height={900}
+      priority
+      sizes="(min-width: 1024px) 52vw, (min-width: 768px) 90vw, 100vw"
+      className="hidden aspect-[4/3] h-auto w-full object-cover md:block"
+    />
+    <Image
+      src="/images/mirto-macrame-mob.png"
+      alt="Ombrellone macramè Mirto BluOrtensia in versione mobile con lavorazione artigianale visibile"
+      width={750}
+      height={1000}
+      priority
+      sizes="100vw"
+      className="aspect-[3/4] h-auto w-full object-cover object-center md:hidden"
+    />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-deep-blue/30 via-transparent to-warm-white/10" />
   </div>;
 }
 
 export function CTA({ label = "Invia una foto del tuo outdoor" }) { return <a href={whatsappUrl} className="btn btn-primary">{label}</a>; }
 
-export function ImagePlaceholder({ label, title, text }: { label: string; title: string; text: string }) {
-  return <article className="image-reveal group min-h-[360px] overflow-hidden rounded-[2.25rem] border border-sand/40 bg-cotton shadow-[0_28px_90px_rgba(49,89,107,0.09)]">
-    <div className="flex h-56 items-start justify-between bg-gradient-to-br from-warm-white via-sand/20 to-soft-blue/20 p-6">
-      <span className="rounded-full bg-white/75 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-deep-blue">{label}</span>
-      <span className="text-5xl text-sand transition group-hover:rotate-6">✺</span>
+export function EditorialImage({ src, alt, label, title, text }: { src: string; alt: string; label: string; title: string; text: string }) {
+  return <article className="image-reveal group overflow-hidden rounded-[2.25rem] border border-sand/40 bg-cotton shadow-[0_28px_90px_rgba(49,89,107,0.09)]">
+    <div className="relative h-72 overflow-hidden bg-sand/10">
+      <Image src={src} alt={alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-[1.03]" />
+      <span className="absolute left-6 top-6 rounded-full bg-warm-white/85 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-deep-blue backdrop-blur">{label}</span>
     </div>
     <div className="p-7"><h3 className="font-heading text-3xl uppercase tracking-[0.11em] text-deep-blue">{title}</h3><p className="mt-4 text-sm leading-7 text-ink/70">{text}</p></div>
   </article>;
@@ -49,12 +59,12 @@ export function ImagePlaceholder({ label, title, text }: { label: string; title:
 
 export function AtmosphereGrid() {
   const scenes = [
-    ["Beach club", "File di ombrelloni che diventano una firma visiva", "Una spiaggia ordinata, luminosa, riconoscibile già da una foto dall'alto: il crochet ammorbidisce le linee e rende premium anche la zona lettini."],
-    ["Hotel pool", "Piscine e resort con un dettaglio memorabile", "Accanto ad acqua, pietra chiara e tessili naturali, l'ombrellone BluOrtensia crea ombra filtrata e una quinta elegante per ospiti e contenuti social."],
-    ["Villa terrace", "Terrazze private con atmosfera da estate italiana", "Per ville al mare, patii e bordi piscina: una presenza leggera, artigianale, pensata per dialogare con lino, cotto, ulivi e bouganville."],
-    ["Restaurant dehors", "Tavoli vista mare più intimi e fotografabili", "Il dehors acquista calore senza appesantirsi: frange, nodi e trama aperta creano un segno riconoscibile durante pranzo, aperitivo e cena."],
+    ["/images/mirto-ombrellone-macrame-hero.png", "Ombrellone macramè Mirto BluOrtensia per beach club con lettini e atmosfera mediterranea", "Beach club", "File di ombrelloni che diventano una firma visiva", "Una spiaggia ordinata, luminosa, riconoscibile già da una foto dall'alto: il crochet ammorbidisce le linee e rende premium anche la zona lettini."],
+    ["/images/mirto-piscina.png", "Ombrelloni macramè Mirto per hotel con piscina e area lounge", "Hotel pool", "Piscine e resort con un dettaglio memorabile", "Accanto ad acqua, pietra chiara e tessili naturali, l'ombrellone BluOrtensia crea ombra filtrata e una quinta elegante per ospiti e contenuti social."],
+    ["/images/mirto-ombrellone-macrame.png", "Ombrellone macramè Mirto su terrazza privata mediterranea con lavorazione artigianale", "Villa terrace", "Terrazze private con atmosfera da estate italiana", "Per ville al mare, patii e bordi piscina: una presenza leggera, artigianale, pensata per dialogare con lino, cotto, ulivi e bouganville."],
+    ["/images/mirto-macrame-ristorante.png", "Ombrellone macramè Mirto per ristorante sul mare con terrazza panoramica", "Restaurant dehors", "Tavoli vista mare più intimi e fotografabili", "Il dehors acquista calore senza appesantirsi: frange, nodi e trama aperta creano un segno riconoscibile durante pranzo, aperitivo e cena."],
   ];
-  return <section className="container-pad reveal py-24"><div className="max-w-3xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-sage">Atmosfere</p><h2 className="heading text-4xl md:text-5xl">Quattro modi di rendere indimenticabile l'ombra</h2></div><div className="mt-12 grid gap-6 md:grid-cols-2">{scenes.map(([label,title,text]) => <ImagePlaceholder key={label} label={label} title={title} text={text} />)}</div></section>;
+  return <section className="container-pad reveal py-24"><div className="max-w-3xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-sage">Atmosfere</p><h2 className="heading text-4xl md:text-5xl">Quattro modi di rendere indimenticabile l'ombra</h2></div><div className="mt-12 grid gap-6 md:grid-cols-2">{scenes.map(([src, alt, label, title, text]) => <EditorialImage key={label} src={src} alt={alt} label={label} title={title} text={text} />)}</div></section>;
 }
 
 export function Benefits() {
@@ -70,7 +80,7 @@ export function Benefits() {
 }
 
 export function ProductSection() {
-  return <section className="container-pad reveal py-24"><div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-sage">Prodotto</p><h2 className="heading text-4xl md:text-5xl">Telo artigianale o ombrellone completo, progettato sul tuo outdoor</h2><p className="mt-6 leading-8 text-ink/70">BluOrtensia può lavorare su strutture già esistenti o proporre una soluzione completa. Per una proposta corretta chiediamo sempre misure, fotografie e contesto d'uso: spiaggia, piscina, terrazza, giardino o dehors.</p></div><div className="grid gap-4 sm:grid-cols-2"><div className="card p-7"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Telo artigianale</h3><p className="mt-4 text-sm leading-7 text-ink/70">Copertura crochet/macramé su misura per valorizzare una struttura adatta già presente.</p></div><div className="card p-7"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Ombrellone completo</h3><p className="mt-4 text-sm leading-7 text-ink/70">Soluzione coordinata per nuovi allestimenti, aperture stagionali e restyling outdoor.</p></div><div className="card p-7 sm:col-span-2"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Misure e foto prima di tutto</h3><p className="mt-4 text-sm leading-7 text-ink/70">Diametro, altezza, base, vento, colore dell'ambiente e fotografie ci permettono di consigliare modello, tonalità e installazione senza improvvisare.</p></div></div></div></section>;
+  return <section className="container-pad reveal py-24"><div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]"><div><p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-sage">Prodotto</p><h2 className="heading text-4xl md:text-5xl">Mirto: telo artigianale o ombrellone completo, progettato sul tuo outdoor</h2><p className="mt-6 leading-8 text-ink/70">BluOrtensia può lavorare su strutture già esistenti o proporre una soluzione completa. Per una proposta corretta chiediamo sempre misure, fotografie e contesto d'uso: spiaggia, piscina, terrazza, giardino o dehors.</p><div className="mt-8 grid gap-4 sm:grid-cols-2"><div className="card p-7"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Telo artigianale</h3><p className="mt-4 text-sm leading-7 text-ink/70">Copertura crochet/macramé su misura per valorizzare una struttura adatta già presente.</p></div><div className="card p-7"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Ombrellone completo</h3><p className="mt-4 text-sm leading-7 text-ink/70">Soluzione coordinata per nuovi allestimenti, aperture stagionali e restyling outdoor.</p></div></div></div><div className="image-reveal overflow-hidden rounded-[2.5rem] border border-sand/40 bg-cotton shadow-[0_28px_90px_rgba(49,89,107,0.09)]"><div className="relative aspect-[4/5]"><Image src="/images/mirto-ombrellone-macrame.png" alt="Ombrellone macramè Mirto BluOrtensia con telo artigianale in cotone naturale" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div><div className="p-7"><h3 className="font-heading text-2xl uppercase tracking-[0.12em] text-deep-blue">Misure e foto prima di tutto</h3><p className="mt-4 text-sm leading-7 text-ink/70">Diametro, altezza, base, vento, colore dell'ambiente e fotografie ci permettono di consigliare modello, tonalità e installazione senza improvvisare.</p></div></div></div></section>;
 }
 
 export function PhilosophySection() {

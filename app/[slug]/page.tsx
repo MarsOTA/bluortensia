@@ -4,7 +4,7 @@ import {
   Benefits,
   CTA,
   FAQSection,
-  ImagePlaceholder,
+  EditorialImage,
   InternalLinks,
   PhotoCTA,
   ProductSection,
@@ -73,10 +73,12 @@ export default async function LandingPage({ params }: Props) {
           </div>
         </div>
 
-        <ImagePlaceholder
-          label="immagine progetto"
+        <EditorialImage
+          src="/images/mirto-ombrellone-macrame.png"
+          alt={`Ombrellone macramè Mirto BluOrtensia per ${page.audience} con lavorazione artigianale in cotone`}
+          label="modello Mirto"
           title={`Outdoor per ${page.audience}`}
-          text="Placeholder per fotografie reali BluOrtensia: dettaglio della lavorazione, vista d'insieme e atmosfera del luogo prima dell'apertura agli ospiti."
+          text="Dettaglio reale del modello Mirto: lavorazione macramè, cotone naturale e frange pensate per rendere riconoscibile lo spazio outdoor."
         />
       </section>
 

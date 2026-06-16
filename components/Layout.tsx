@@ -1,18 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { brandAltText, brandAssets } from "@/lib/assets";
-import { navLinks, whatsappUrl } from "@/lib/site";
+import { whatsappUrl } from "@/lib/site";
 
 export function Header() {
-  return <header className="sticky top-0 z-50 border-b border-sand/25 bg-warm-white/92 backdrop-blur-xl">
+  return <header className="sticky top-0 z-50 border-b border-sand/30 bg-warm-white/95 backdrop-blur-xl">
     <div className="container-pad flex h-20 items-center justify-between gap-6">
       <Link href="/" className="flex shrink-0 items-center" aria-label="BluOrtensia home">
-        <Image src={brandAssets.logo} alt={brandAltText.logo} width={160} height={28} priority className="h-auto w-40" />
+        <Image src={brandAssets.logo} alt={brandAltText.logo} width={190} height={34} priority className="h-auto w-40 sm:w-48" />
       </Link>
-      <nav className="hidden items-center gap-5 text-xs font-semibold uppercase tracking-[0.16em] text-ink/70 lg:flex">
-        {navLinks.map(([href,label]) => <Link key={href} href={href} className="hover:text-deep-blue">{label}</Link>)}
+      <nav className="hidden items-center gap-12 font-heading text-lg text-deep-blue md:flex">
+        <Link href="/" className="hover:text-beige">Home</Link>
+        <Link href="/beach-club" className="hover:text-beige">Ombrelloni</Link>
+        <Link href="/contatti" className="hover:text-beige">Contatti</Link>
       </nav>
-      <a className="btn btn-primary hidden sm:inline-flex" href={whatsappUrl}>WhatsApp</a>
+      <a className="btn btn-primary hidden sm:inline-flex" href={whatsappUrl}>Richiedi preventivo</a>
     </div>
   </header>;
 }

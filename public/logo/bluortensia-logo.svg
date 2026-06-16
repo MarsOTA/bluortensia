@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 352" role="img" aria-labelledby="title desc">
+  <title id="title">BluOrtensia</title>
+  <desc id="desc">BluOrtensia wordmark in deep coastal blue with a circular O mark.</desc>
+  <rect width="2048" height="352" fill="transparent"/>
+  <g fill="#2f6da3">
+    <text x="20" y="260" font-family="Cormorant SC, Cormorant Garamond, Georgia, serif" font-size="250" font-weight="400" letter-spacing="-9">Blu</text>
+    <circle cx="690" cy="177" r="137" fill="none" stroke="#2f6da3" stroke-width="12"/>
+    <circle cx="690" cy="177" r="18"/>
+    <text x="862" y="260" font-family="Cormorant SC, Cormorant Garamond, Georgia, serif" font-size="250" font-weight="400" letter-spacing="-10">rtensia</text>
+    <circle cx="1738" cy="65" r="17"/>
+  </g>
+</svg>

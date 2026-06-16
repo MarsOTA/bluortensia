@@ -9,9 +9,9 @@ export const brandAssets = {
 
 export const brandAltText = {
   logo: "BluOrtensia",
-  heroDesktop: "Ombrellone macramè Mirto BluOrtensia per beach club, hotel e ville sul mare",
-  heroMobile: "Ombrellone macramè Mirto BluOrtensia in versione mobile con lavorazione artigianale visibile",
-  productMirto: "Ombrellone macramè Mirto BluOrtensia con telo artigianale in cotone naturale",
-  restaurant: "Ombrellone macramè Mirto per ristorante sul mare con terrazza panoramica",
-  hotelPool: "Ombrelloni macramè Mirto per hotel con piscina e area lounge",
+  heroDesktop: "Ombrellone macramè Mirto su terrazza mediterranea con piscina e vista mare",
+  heroMobile: "Ombrellone macramè Mirto su terrazza mediterranea in formato mobile",
+  productMirto: "Ombrellone macramè Mirto BluOrtensia in cotone naturale",
+  restaurant: "Ombrellone macramè Mirto per ristorante sul mare",
+  hotelPool: "Ombrelloni macramè Mirto per hotel con piscina",
 } as const;

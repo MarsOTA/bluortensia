@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "check:conflicts": "node scripts/check-conflicts.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "gsap": "latest",

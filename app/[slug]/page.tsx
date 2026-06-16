@@ -15,7 +15,7 @@ import { pageData, siteUrl, type PageKey } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
-const geoSlugs = ["forte-dei-marmi", "puglia", "sardegna", "costa-smeralda", "sicilia"];
+const geoSlugs = ["forte-dei-marmi", "puglia", "sardegna", "costa-smeralda", "sicilia"] as const;
 
 export function generateStaticParams() {
   return Object.keys(pageData).map((slug) => ({ slug }));
@@ -39,22 +39,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function buildFaqJsonLd(audience: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.slice(0, 3).map(([name, text]) => ({
+      "@type": "Question",
+      name: `${name} (${audience})`,
+      acceptedAnswer: { "@type": "Answer", text },
+    })),
+  };
+}
+
 export default async function LandingPage({ params }: Props) {
   const { slug } = await params;
   const page = pageData[slug as PageKey];
 
   if (!page) notFound();
 
-  const isGeo = geoSlugs.includes(slug);
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.slice(0, 3).map(([name, text]) => ({
-      "@type": "Question",
-      name: `${name} (${page.audience})`,
-      acceptedAnswer: { "@type": "Answer", text },
-    })),
-  };
+  const isGeo = geoSlugs.some((geoSlug) => geoSlug === slug);
+  const faqLd = buildFaqJsonLd(page.audience);
 
   return (
     <main>
